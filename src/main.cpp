@@ -1,5 +1,5 @@
+#include "source.h"
 #include <iostream>
-
 
 class CutinReasoning {
 public:
@@ -26,8 +26,12 @@ void CutinReasoning::InitData(const double &speed, const double &currRadius)
 
 int main()
 {
-    CutinReasoning car;
-    car.InitData(2.0, 3.0);
-    std::cout << "-----Testing-----" << std::endl;
-    std::cout << car.GetAcc() << std::endl;
+    // CutinReasoning car;
+    // car.InitData(2.0, 3.0);
+    // std::cout << "-----Testing-----" << std::endl;
+    // std::cout << car.GetAcc() << std::endl;
+    MyClass::Base* base = new MyClass::Derived();
+    bool flag = base->func(3, 2);
+    std::cout << flag << std::endl;
+    return 0;
 } 

@@ -5,4 +5,12 @@
  project(Myproject)  
  
  # source file
- add_executable(Myproject main.cpp)
+# 添加 src 目录中的所有源文件
+aux_source_directory(src SRC_FILES)
+
+# 将所有源文件添加到可执行文件
+add_executable(Myproject src/main.cpp ${SRC_FILES})
+
+ #include
+ include_directories(include)
+ include_directories(src)
